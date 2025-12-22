@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react"
-
+import Image from "next/image"
 export function CTASection() {
   return (
     <section id="contact" className="py-20 md:py-32">
@@ -39,7 +39,7 @@ export function CTASection() {
           <footer className="mt-16 flex flex-col items-center gap-8 border-t-4 border-foreground pt-12 sm:flex-row sm:justify-between">
             <div className="flex items-center gap-4">
               <div className="flex h-12 w-12 items-center justify-center bg-primary">
-                <span className="font-mono text-2xl font-bold text-background">L</span>
+                <Image src={"lunatekllc.png"} alt="Lunatek" width={150} height={150}/>
               </div>
               <span className="text-xl font-bold uppercase">Lunatek LLC</span>
             </div>
