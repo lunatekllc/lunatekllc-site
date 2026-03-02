@@ -35,12 +35,11 @@ export function HeroSection() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button size="lg" className="group w-full sm:w-auto bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
-                START PROJECT
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent border-primary/50 hover:bg-primary/10 hover:border-primary">
-                VIEW WORK
+              <Button asChild size="lg" className="group w-full sm:w-auto bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
+                <a href="#case-study">
+                  VIEW WORK
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
               </Button>
             </div>
           </div>
