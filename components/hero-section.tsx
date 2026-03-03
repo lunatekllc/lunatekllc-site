@@ -30,7 +30,7 @@ export function HeroSection() {
             </h1>
 
             <p className="max-w-lg text-pretty text-lg leading-relaxed text-muted-foreground">
-              AI builds the prototype. Humans make it production-ready. We bring the expert touch that transforms generated code into scalable, reliable infrastructure.
+              Bring your AI-generated prototype and we refine it with human ingenuity. We transform generated code into scalable, reliable, production-ready infrastructure.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
