@@ -1,23 +1,23 @@
 const steps = [
   {
     number: "01",
-    title: "Infrastructure Design",
-    description: "Architect cloud infrastructure for reliability, security, and scalability from day one.",
+    title: "AI Prototype",
+    description: "Start with your AI-generated code or prototype. We take it from where the AI left off.",
   },
   {
     number: "02",
-    title: "AI Development",
-    description: "AI agents rapidly generate application code, components, and features.",
+    title: "Human Review",
+    description: "Our engineers analyze the codebase, identifying gaps in security, scalability, and best practices.",
   },
   {
     number: "03",
-    title: "Manual Refinement",
-    description: "Expert developers debug, optimize, and refine to production standards.",
+    title: "Expert Refinement",
+    description: "Hands-on refactoring, optimization, and hardening by experienced developers who understand production needs.",
   },
   {
     number: "04",
-    title: "Deploy & Scale",
-    description: "Continuous monitoring and optimization as your application grows.",
+    title: "Production Ready",
+    description: "Deployed with proper infrastructure, monitoring, and the confidence that comes from human expertise.",
   },
 ]
 
@@ -68,19 +68,19 @@ export function ProcessSection() {
           <div className="relative overflow-hidden rounded-2xl border border-primary/30 bg-gradient-to-br from-card via-card to-primary/5 p-12">
             <div className="absolute -top-12 -left-12 h-24 w-24 rounded-full bg-gradient-to-br from-primary/30 to-transparent blur-xl" />
             <div className="absolute -bottom-12 -right-12 h-24 w-24 rounded-full bg-gradient-to-tl from-secondary/30 to-transparent blur-xl" />
-            <h3 className="relative z-10 mb-6 text-2xl font-bold uppercase">Why This Works</h3>
+            <h3 className="relative z-10 mb-6 text-2xl font-bold uppercase">The Human Advantage</h3>
             <div className="relative z-10 grid gap-6 md:grid-cols-3">
               <div className="border-l-2 border-primary pl-4">
-                <p className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">10x Faster</p>
-                <p className="text-sm text-muted-foreground">Initial development</p>
+                <p className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">AI Speed</p>
+                <p className="text-sm text-muted-foreground">Keep your prototype momentum</p>
               </div>
               <div className="border-l-2 border-primary pl-4">
-                <p className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Production Grade</p>
-                <p className="text-sm text-muted-foreground">Expert debugging</p>
+                <p className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Human Quality</p>
+                <p className="text-sm text-muted-foreground">Expert-level refinement</p>
               </div>
               <div className="border-l-2 border-primary pl-4">
-                <p className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Built to Scale</p>
-                <p className="text-sm text-muted-foreground">From the start</p>
+                <p className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Production Trust</p>
+                <p className="text-sm text-muted-foreground">Confidence in your code</p>
               </div>
             </div>
           </div>
