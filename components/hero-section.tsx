@@ -18,20 +18,19 @@ export function HeroSection() {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-gradient-to-r from-primary/10 to-transparent px-4 py-2">
               <div className="h-2 w-2 rounded-full bg-gradient-to-r from-primary to-secondary animate-pulse" />
-              <span className="text-sm font-bold uppercase tracking-wider text-primary">Infrastructure First</span>
+              <span className="text-sm font-bold uppercase tracking-wider text-primary">Human-Focused Engineering</span>
             </div>
 
             <h1 className="text-balance text-5xl font-bold leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
-              BUILD
+              FROM
               <br />
-              <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">FASTER</span>
+              <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">PROTOTYPE</span>
               <br />
-              WITH AI
+              TO PRODUCTION
             </h1>
 
             <p className="max-w-lg text-pretty text-lg leading-relaxed text-muted-foreground">
-              Infrastructure excellence meets AI-powered development. We handle the foundation while agents build your
-              software.
+              Bring your AI-generated prototype and we refine it with human ingenuity. We transform generated code into scalable, reliable, production-ready infrastructure.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -57,20 +56,20 @@ export function HeroSection() {
         <div className="mt-24 grid gap-6 md:grid-cols-3">
           <div className="group relative overflow-hidden rounded-xl border border-border/50 bg-gradient-to-br from-card to-card/50 p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
             <div className="absolute -top-8 -right-8 h-24 w-24 rounded-full bg-gradient-to-br from-primary/40 to-transparent transition-all group-hover:scale-125" />
-            <h3 className="relative z-10 mb-3 text-xl font-bold uppercase">Infrastructure</h3>
-            <p className="relative z-10 text-sm leading-relaxed text-muted-foreground">Robust, scalable foundation</p>
+            <h3 className="relative z-10 mb-3 text-xl font-bold uppercase">AI Prototype</h3>
+            <p className="relative z-10 text-sm leading-relaxed text-muted-foreground">Start with AI-generated code</p>
           </div>
 
           <div className="group relative overflow-hidden rounded-xl border border-border/50 bg-gradient-to-br from-card to-card/50 p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
             <div className="absolute -top-8 -right-8 h-24 w-24 rounded-full border-4 border-primary/40 transition-all group-hover:scale-125" />
-            <h3 className="relative z-10 mb-3 text-xl font-bold uppercase">AI Development</h3>
-            <p className="relative z-10 text-sm leading-relaxed text-muted-foreground">Rapid agent-powered builds</p>
+            <h3 className="relative z-10 mb-3 text-xl font-bold uppercase">Human Expertise</h3>
+            <p className="relative z-10 text-sm leading-relaxed text-muted-foreground">Refined by experienced engineers</p>
           </div>
 
           <div className="group relative overflow-hidden rounded-xl border border-border/50 bg-gradient-to-br from-card to-card/50 p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
             <div className="absolute -top-8 -right-8 h-24 w-24 rounded-full bg-gradient-to-br from-primary/30 to-secondary/20 transition-all group-hover:scale-125" />
-            <h3 className="relative z-10 mb-3 text-xl font-bold uppercase">Expert Debug</h3>
-            <p className="relative z-10 text-sm leading-relaxed text-muted-foreground">Manual refinement & scaling</p>
+            <h3 className="relative z-10 mb-3 text-xl font-bold uppercase">Production Ready</h3>
+            <p className="relative z-10 text-sm leading-relaxed text-muted-foreground">Scalable, secure infrastructure</p>
           </div>
         </div>
       </div>
