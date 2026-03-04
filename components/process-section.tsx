@@ -1,27 +1,27 @@
 const steps = [
   {
     number: "01",
-    title: "Intake & Assessment",
-    description: "We analyze your prototype, identifying architectural gaps, security vulnerabilities, and scaling limitations.",
-    output: "Technical audit document",
+    title: "Structural Assessment",
+    description: "We audit your prototype's architecture, identifying load-bearing weaknesses and scaling limitations.",
+    output: "Infrastructure blueprint",
   },
   {
     number: "02",
-    title: "Infrastructure Design",
-    description: "Architect deterministic Go foundations tailored to your specific use case and scaling requirements.",
-    output: "System architecture diagram",
+    title: "Foundation Design",
+    description: "Architect the industrial-grade shell tailored to your specific traffic patterns and growth trajectory.",
+    output: "System topology diagram",
   },
   {
     number: "03",
-    title: "Module Integration",
-    description: "Drop in pre-built, production-hardened modules. Your prototype's logic wraps around our battle-tested core.",
-    output: "Containerized services",
+    title: "Module Installation",
+    description: "Drop in pre-fabricated infrastructure modules. Your business logic wraps around our battle-tested framework.",
+    output: "Deterministic engines",
   },
   {
     number: "04",
-    title: "Deployment & Handoff",
-    description: "Deployed to your cloud of choice with full observability, documentation, and runbooks.",
-    output: "Production environment",
+    title: "Production Handoff",
+    description: "Deployed to your cloud of choice—or multiple clouds—with full observability and operational runbooks.",
+    output: "Vendor-independent system",
   },
 ]
 
@@ -39,12 +39,12 @@ export function ProcessSection() {
             <span className="uppercase tracking-widest text-primary">The Process</span>
           </div>
           <h2 className="text-balance text-3xl font-bold uppercase leading-tight tracking-tight md:text-4xl lg:text-5xl">
-            Prototype to
+            From Blueprint to
             <br />
             <span className="text-primary">Production</span>
           </h2>
           <p className="mt-6 text-pretty text-lg text-muted-foreground">
-            We take your messy MVP and drop it into a hardened infrastructure shell. Days, not months.
+            Like structural engineering for software—we assess, design, fabricate, and install. Your prototype becomes a production-grade system in days.
           </p>
         </div>
 
@@ -87,11 +87,11 @@ export function ProcessSection() {
           </div>
           <div className="bg-background p-8 text-center">
             <p className="font-mono text-4xl font-bold text-primary">100%</p>
-            <p className="mt-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">Go Core Logic</p>
+            <p className="mt-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">Deterministic Engines</p>
           </div>
           <div className="bg-background p-8 text-center">
             <p className="font-mono text-4xl font-bold text-primary">0</p>
-            <p className="mt-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">Vendor Lock-in</p>
+            <p className="mt-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">Vendor Dependencies</p>
           </div>
         </div>
       </div>
