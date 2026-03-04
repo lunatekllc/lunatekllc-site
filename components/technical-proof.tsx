@@ -1,3 +1,5 @@
+import { Server, Database, Shield, Workflow, ArrowRight, Activity } from "lucide-react"
+
 export function TechnicalProof() {
   return (
     <section id="technical" className="relative py-20 md:py-32 overflow-hidden">
@@ -14,81 +16,128 @@ export function TechnicalProof() {
               <span className="uppercase tracking-widest text-primary">Technical Proof</span>
             </div>
             <h2 className="text-balance text-3xl font-bold uppercase leading-tight tracking-tight md:text-4xl lg:text-5xl">
-              Deterministic
+              Industrial-Grade
               <br />
-              <span className="text-primary">By Design</span>
+              <span className="text-primary">Architecture</span>
             </h2>
             <p className="mt-6 text-pretty text-lg text-muted-foreground">
-              Every module ships with type-safe interfaces, comprehensive tests, and infrastructure-as-code. 
-              No magic, no surprises—just predictable behavior at scale.
+              Every deployment follows structural engineering principles—modular, load-tested, and built to withstand real-world stress.
             </p>
 
             <ul className="mt-8 space-y-4">
               <li className="flex items-start gap-3">
                 <div className="mt-1.5 h-2 w-2 bg-primary flex-shrink-0" />
                 <div>
-                  <p className="font-bold">Strongly Typed Contracts</p>
-                  <p className="text-sm text-muted-foreground">Go interfaces ensure compile-time safety across all module boundaries.</p>
+                  <p className="font-bold">Deterministic Behavior</p>
+                  <p className="text-sm text-muted-foreground">Every module produces the same output for the same input—no surprises at scale.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <div className="mt-1.5 h-2 w-2 bg-primary flex-shrink-0" />
                 <div>
-                  <p className="font-bold">Infrastructure as Code</p>
-                  <p className="text-sm text-muted-foreground">Terraform/Pulumi modules for reproducible deployments across any cloud.</p>
+                  <p className="font-bold">Cloud-Agnostic by Design</p>
+                  <p className="text-sm text-muted-foreground">Swap AWS for GCP, or migrate to on-prem, without rewriting application code.</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <div className="mt-1.5 h-2 w-2 bg-primary flex-shrink-0" />
                 <div>
-                  <p className="font-bold">Observability Built-in</p>
-                  <p className="text-sm text-muted-foreground">OpenTelemetry tracing, Prometheus metrics, and structured logging from day one.</p>
+                  <p className="font-bold">Observable from Day One</p>
+                  <p className="text-sm text-muted-foreground">Built-in metrics, tracing, and logging—you see exactly what's happening inside.</p>
                 </div>
               </li>
             </ul>
           </div>
 
-          {/* Terminal window */}
+          {/* System Topology Diagram */}
           <div className="border border-border bg-card">
-            {/* Terminal header */}
-            <div className="flex items-center gap-2 border-b border-border px-4 py-3">
-              <div className="h-3 w-3 rounded-full bg-destructive/60" />
-              <div className="h-3 w-3 rounded-full bg-yellow-500/60" />
-              <div className="h-3 w-3 rounded-full bg-green-500/60" />
-              <span className="ml-4 font-mono text-xs text-muted-foreground">main.go</span>
+            {/* Diagram header */}
+            <div className="flex items-center justify-between border-b border-border px-4 py-3">
+              <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">System Topology</span>
+              <div className="flex items-center gap-2">
+                <div className="h-2 w-2 bg-green-500 animate-pulse" />
+                <span className="font-mono text-xs text-green-500">LIVE</span>
+              </div>
             </div>
             
-            {/* Code content */}
-            <div className="overflow-x-auto p-4">
-              <pre className="font-mono text-sm leading-relaxed">
-                <code>
-                  <span className="text-muted-foreground">// Deterministic blob storage interface</span>{"\n"}
-                  <span className="text-primary">package</span> storage{"\n\n"}
-                  
-                  <span className="text-primary">import</span> ({"\n"}
-                  {"  "}<span className="text-green-400">{'"context"'}</span>{"\n"}
-                  {"  "}<span className="text-green-400">{'"gocloud.dev/blob"'}</span>{"\n"}
-                  ){"\n\n"}
+            {/* Topology visualization */}
+            <div className="p-8">
+              {/* Edge Layer */}
+              <div className="mb-6">
+                <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Edge Layer</p>
+                <div className="flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center border-2 border-primary bg-primary/10">
+                    <Shield className="h-6 w-6 text-primary" />
+                  </div>
+                  <div className="flex-1 h-px bg-border" />
+                  <span className="font-mono text-xs">Auth-Hardened Gateway</span>
+                </div>
+              </div>
 
-                  <span className="text-primary">type</span> <span className="text-yellow-400">MediaHub</span> <span className="text-primary">interface</span> {"{\n"}
-                  {"  "}<span className="text-blue-400">Upload</span>(ctx context.Context, key <span className="text-primary">string</span>, data []<span className="text-primary">byte</span>) <span className="text-primary">error</span>{"\n"}
-                  {"  "}<span className="text-blue-400">Download</span>(ctx context.Context, key <span className="text-primary">string</span>) ([]<span className="text-primary">byte</span>, <span className="text-primary">error</span>){"\n"}
-                  {"  "}<span className="text-blue-400">Delete</span>(ctx context.Context, key <span className="text-primary">string</span>) <span className="text-primary">error</span>{"\n"}
-                  {"}\n\n"}
+              {/* Connection */}
+              <div className="flex justify-center mb-6">
+                <div className="flex flex-col items-center">
+                  <div className="h-6 w-px bg-primary" />
+                  <ArrowRight className="h-4 w-4 text-primary rotate-90" />
+                </div>
+              </div>
 
-                  <span className="text-muted-foreground">// Works with S3, GCS, Azure, or local filesystem</span>{"\n"}
-                  <span className="text-primary">func</span> <span className="text-blue-400">NewMediaHub</span>(bucket *blob.Bucket) MediaHub {"{\n"}
-                  {"  "}<span className="text-primary">return</span> &mediaHub{"{bucket: bucket}"}{"\n"}
-                  {"}"}
-                </code>
-              </pre>
+              {/* Processing Layer */}
+              <div className="mb-6">
+                <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Processing Layer</p>
+                <div className="grid grid-cols-3 gap-3">
+                  <div className="flex flex-col items-center gap-2 border border-border bg-background p-3">
+                    <Server className="h-5 w-5 text-primary" />
+                    <span className="font-mono text-[10px] text-center">Compute Fabric</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 border border-border bg-background p-3">
+                    <Workflow className="h-5 w-5 text-primary" />
+                    <span className="font-mono text-[10px] text-center">Event Engine</span>
+                  </div>
+                  <div className="flex flex-col items-center gap-2 border border-border bg-background p-3">
+                    <Activity className="h-5 w-5 text-primary" />
+                    <span className="font-mono text-[10px] text-center">Data Pipeline</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Connection */}
+              <div className="flex justify-center mb-6">
+                <div className="flex flex-col items-center">
+                  <div className="h-6 w-px bg-primary" />
+                  <ArrowRight className="h-4 w-4 text-primary rotate-90" />
+                </div>
+              </div>
+
+              {/* Storage Layer */}
+              <div>
+                <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">Storage Layer</p>
+                <div className="flex items-center gap-3">
+                  <div className="flex h-12 w-12 items-center justify-center border border-border bg-background">
+                    <Database className="h-6 w-6 text-muted-foreground" />
+                  </div>
+                  <div className="flex-1 h-px bg-border" />
+                  <span className="font-mono text-xs">Cloud-Agnostic Storage</span>
+                </div>
+              </div>
             </div>
 
-            {/* Terminal footer */}
+            {/* Diagram footer - Performance benchmarks */}
             <div className="border-t border-border px-4 py-3">
-              <p className="font-mono text-xs text-muted-foreground">
-                <span className="text-primary">$</span> go build -o mediahub ./cmd/mediahub
-              </p>
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div>
+                  <p className="font-mono text-lg font-bold text-primary">99.9%</p>
+                  <p className="font-mono text-[10px] text-muted-foreground">Uptime SLA</p>
+                </div>
+                <div>
+                  <p className="font-mono text-lg font-bold text-primary">&lt;50ms</p>
+                  <p className="font-mono text-[10px] text-muted-foreground">P99 Latency</p>
+                </div>
+                <div>
+                  <p className="font-mono text-lg font-bold text-primary">10K+</p>
+                  <p className="font-mono text-[10px] text-muted-foreground">RPS Ready</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

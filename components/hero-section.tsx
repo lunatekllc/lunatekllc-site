@@ -20,13 +20,13 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-balance text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
-              Stop Building Prototypes.
+              Deploy Production-Grade Foundations,
               <br />
-              <span className="text-primary">Start Deploying Infrastructure.</span>
+              <span className="text-primary">Not Just Code.</span>
             </h1>
 
             <p className="max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
-              We provide the deterministic Go-based foundations your app needs to scale. Cloud-agnostic, production-ready, and deployed in days, not months.
+              We provide the industrial-grade infrastructure shell your prototype needs to survive real-world load. Vendor-independent, production-hardened, and deployed in days.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -71,26 +71,26 @@ export function HeroSection() {
               <Box className="h-5 w-5 text-primary" />
               <span className="font-mono text-xs uppercase tracking-widest text-primary">Deterministic</span>
             </div>
-            <h3 className="mb-2 text-lg font-bold uppercase">Go-Powered Core</h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">Immutable, type-safe foundations that behave predictably at any scale.</p>
+            <h3 className="mb-2 text-lg font-bold uppercase">Predictable Engines</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">High-velocity infrastructure modules that behave the same way, every time, at any scale.</p>
           </div>
 
           <div className="group bg-background p-8 transition-all hover:bg-primary/5">
             <div className="mb-4 flex items-center gap-3">
               <Box className="h-5 w-5 text-primary" />
-              <span className="font-mono text-xs uppercase tracking-widest text-primary">Cloud-Agnostic</span>
+              <span className="font-mono text-xs uppercase tracking-widest text-primary">Vendor Independent</span>
             </div>
-            <h3 className="mb-2 text-lg font-bold uppercase">Deploy Anywhere</h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">AWS, GCP, Azure, or bare metal. Your infrastructure, your choice.</p>
+            <h3 className="mb-2 text-lg font-bold uppercase">Zero Lock-In</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">Switch between AWS, GCP, Azure, or on-prem without rewriting a single line of code.</p>
           </div>
 
           <div className="group bg-background p-8 transition-all hover:bg-primary/5">
             <div className="mb-4 flex items-center gap-3">
               <Box className="h-5 w-5 text-primary" />
-              <span className="font-mono text-xs uppercase tracking-widest text-primary">Production-Hardened</span>
+              <span className="font-mono text-xs uppercase tracking-widest text-primary">Industrial-Grade</span>
             </div>
-            <h3 className="mb-2 text-lg font-bold uppercase">Battle-Tested</h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">Infrastructure patterns proven in high-traffic, mission-critical systems.</p>
+            <h3 className="mb-2 text-lg font-bold uppercase">Built to Last</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">Pre-fabricated structural frameworks proven in mission-critical production systems.</p>
           </div>
         </div>
       </div>
