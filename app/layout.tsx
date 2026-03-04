@@ -10,7 +10,7 @@ const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mo
 export const metadata: Metadata = {
   title: "Lunatek LLC - Production-Ready Infrastructure",
   description:
-    "Deterministic Go-based foundations for scaling prototypes into production. Cloud-agnostic infrastructure deployed in days, not months.",
+    "Industrial-grade infrastructure for scaling prototypes into production. Vendor-independent systems deployed in days, not months.",
   generator: "v0.app",
   icons: {
     icon: [

@@ -27,7 +27,7 @@ export function CTASection() {
               </h2>
 
               <p className="mt-6 max-w-xl text-pretty text-lg text-muted-foreground">
-                Stop fighting brittle code. Get deterministic, Go-powered infrastructure that scales with your business.
+                Stop fighting brittle code. Get deterministic, production-hardened infrastructure that scales with your business.
               </p>
 
               <div className="mt-8 flex flex-col gap-4 sm:flex-row">
