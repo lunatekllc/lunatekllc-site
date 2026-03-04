@@ -1,75 +1,96 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Box } from "lucide-react"
 
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-32">
-      {/* Background with gradient effects */}
+      {/* Grid background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(220,38,38,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(220,38,38,0.05)_1px,transparent_1px)] bg-[size:80px_80px]" />
-        <div className="absolute top-0 left-0 h-[600px] w-[600px] rounded-full bg-gradient-to-br from-primary/20 via-primary/5 to-transparent blur-3xl" />
-        <div className="absolute bottom-0 right-0 h-[500px] w-[500px] rounded-full bg-gradient-to-tl from-primary/15 via-transparent to-transparent blur-3xl" />
-        <div className="absolute top-20 right-[10%] h-[400px] w-[400px] rounded-full border border-primary/20" />
-        <div className="absolute bottom-20 left-[5%] h-[300px] w-[300px] border border-primary/10" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute top-0 left-0 h-[500px] w-[500px] bg-primary/5 blur-[100px]" />
+        <div className="absolute bottom-0 right-0 h-[400px] w-[400px] bg-primary/3 blur-[100px]" />
       </div>
 
       <div className="container px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div className="space-y-8">
-            <div className="inline-flex items-center gap-3 rounded-full border border-primary/30 bg-gradient-to-r from-primary/10 to-transparent px-4 py-2">
-              <div className="h-2 w-2 rounded-full bg-gradient-to-r from-primary to-secondary animate-pulse" />
-              <span className="text-sm font-bold uppercase tracking-wider text-primary">Human-Focused Engineering</span>
+            <div className="inline-flex items-center gap-3 border border-primary/30 bg-primary/5 px-4 py-2 font-mono text-xs">
+              <div className="h-2 w-2 bg-primary animate-pulse" />
+              <span className="uppercase tracking-widest text-primary">Production-Ready Infrastructure</span>
             </div>
 
-            <h1 className="text-balance text-5xl font-bold leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
-              FROM
+            <h1 className="text-balance text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl">
+              Stop Building Prototypes.
               <br />
-              <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">PROTOTYPE</span>
-              <br />
-              TO PRODUCTION
+              <span className="text-primary">Start Deploying Infrastructure.</span>
             </h1>
 
-            <p className="max-w-lg text-pretty text-lg leading-relaxed text-muted-foreground">
-              Bring your AI-generated prototype and we refine it with human ingenuity. We transform generated code into scalable, reliable, production-ready infrastructure.
+            <p className="max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground">
+              We provide the deterministic Go-based foundations your app needs to scale. Cloud-agnostic, production-ready, and deployed in days, not months.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-              <Button asChild size="lg" className="group w-full sm:w-auto bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90">
-                <a href="#case-study">
-                  VIEW WORK
+              <Button asChild size="lg" className="group font-mono uppercase tracking-wider">
+                <a href="#modules">
+                  View Infrastructure Modules
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="font-mono uppercase tracking-wider border-primary/50 hover:bg-primary/10">
+                <a href="#process">
+                  Scale Your Prototype
                 </a>
               </Button>
             </div>
           </div>
 
-          <div className="relative hidden lg:block h-[600px]">
-            <div className="absolute top-0 right-0 h-[250px] w-[250px] rounded-3xl bg-gradient-to-br from-primary to-secondary opacity-80" />
-            <div className="absolute top-[100px] right-[100px] h-[200px] w-[200px] rounded-2xl border-2 border-foreground/50 backdrop-blur-sm" />
-            <div className="absolute bottom-[150px] right-[50px] h-[180px] w-[180px] rounded-full border-2 border-primary/50 bg-gradient-to-br from-primary/10 to-transparent" />
-            <div className="absolute bottom-0 right-[200px] h-[120px] w-[120px] rounded-xl bg-gradient-to-tr from-foreground to-foreground/80" />
-            <div className="absolute top-[300px] right-[280px] h-2 w-24 rounded-full bg-gradient-to-r from-primary to-secondary" />
-            <div className="absolute top-[350px] right-[250px] h-24 w-2 rounded-full bg-gradient-to-b from-foreground to-foreground/50" />
+          {/* Industrial geometric shapes */}
+          <div className="relative hidden lg:block h-[500px]">
+            <div className="absolute top-0 right-0 h-[200px] w-[200px] border-2 border-primary/40" />
+            <div className="absolute top-[50px] right-[50px] h-[200px] w-[200px] border border-foreground/20" />
+            <div className="absolute top-[100px] right-[100px] h-[200px] w-[200px] bg-primary/10" />
+            <div className="absolute bottom-[100px] right-[20px] h-[150px] w-[150px] border-2 border-primary" />
+            <div className="absolute bottom-[50px] right-[70px] h-[100px] w-[100px] bg-card border border-border" />
+            <div className="absolute top-[200px] right-[250px] h-1 w-32 bg-primary" />
+            <div className="absolute top-[230px] right-[250px] h-16 w-1 bg-foreground/30" />
+            {/* Circuit pattern */}
+            <div className="absolute top-[300px] right-[150px] flex items-center gap-2">
+              <div className="h-3 w-3 border border-primary" />
+              <div className="h-0.5 w-8 bg-primary/50" />
+              <div className="h-3 w-3 bg-primary" />
+              <div className="h-0.5 w-12 bg-primary/50" />
+              <div className="h-3 w-3 border border-primary" />
+            </div>
           </div>
         </div>
 
-        <div className="mt-24 grid gap-6 md:grid-cols-3">
-          <div className="group relative overflow-hidden rounded-xl border border-border/50 bg-gradient-to-br from-card to-card/50 p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
-            <div className="absolute -top-8 -right-8 h-24 w-24 rounded-full bg-gradient-to-br from-primary/40 to-transparent transition-all group-hover:scale-125" />
-            <h3 className="relative z-10 mb-3 text-xl font-bold uppercase">AI Prototype</h3>
-            <p className="relative z-10 text-sm leading-relaxed text-muted-foreground">Start with AI-generated code</p>
+        {/* Key value props */}
+        <div className="mt-24 grid gap-px bg-border md:grid-cols-3">
+          <div className="group bg-background p-8 transition-all hover:bg-primary/5">
+            <div className="mb-4 flex items-center gap-3">
+              <Box className="h-5 w-5 text-primary" />
+              <span className="font-mono text-xs uppercase tracking-widest text-primary">Deterministic</span>
+            </div>
+            <h3 className="mb-2 text-lg font-bold uppercase">Go-Powered Core</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">Immutable, type-safe foundations that behave predictably at any scale.</p>
           </div>
 
-          <div className="group relative overflow-hidden rounded-xl border border-border/50 bg-gradient-to-br from-card to-card/50 p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
-            <div className="absolute -top-8 -right-8 h-24 w-24 rounded-full border-4 border-primary/40 transition-all group-hover:scale-125" />
-            <h3 className="relative z-10 mb-3 text-xl font-bold uppercase">Human Expertise</h3>
-            <p className="relative z-10 text-sm leading-relaxed text-muted-foreground">Refined by experienced engineers</p>
+          <div className="group bg-background p-8 transition-all hover:bg-primary/5">
+            <div className="mb-4 flex items-center gap-3">
+              <Box className="h-5 w-5 text-primary" />
+              <span className="font-mono text-xs uppercase tracking-widest text-primary">Cloud-Agnostic</span>
+            </div>
+            <h3 className="mb-2 text-lg font-bold uppercase">Deploy Anywhere</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">AWS, GCP, Azure, or bare metal. Your infrastructure, your choice.</p>
           </div>
 
-          <div className="group relative overflow-hidden rounded-xl border border-border/50 bg-gradient-to-br from-card to-card/50 p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
-            <div className="absolute -top-8 -right-8 h-24 w-24 rounded-full bg-gradient-to-br from-primary/30 to-secondary/20 transition-all group-hover:scale-125" />
-            <h3 className="relative z-10 mb-3 text-xl font-bold uppercase">Production Ready</h3>
-            <p className="relative z-10 text-sm leading-relaxed text-muted-foreground">Scalable, secure infrastructure</p>
+          <div className="group bg-background p-8 transition-all hover:bg-primary/5">
+            <div className="mb-4 flex items-center gap-3">
+              <Box className="h-5 w-5 text-primary" />
+              <span className="font-mono text-xs uppercase tracking-widest text-primary">Production-Hardened</span>
+            </div>
+            <h3 className="mb-2 text-lg font-bold uppercase">Battle-Tested</h3>
+            <p className="text-sm leading-relaxed text-muted-foreground">Infrastructure patterns proven in high-traffic, mission-critical systems.</p>
           </div>
         </div>
       </div>
