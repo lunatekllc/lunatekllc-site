@@ -1,16 +1,16 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Orbitron, Rajdhani } from "next/font/google"
+import { Inter, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const _orbitron = Orbitron({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] })
-const _rajdhani = Rajdhani({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"] })
+const inter = Inter({ subsets: ["latin"] })
+const _jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" })
 
 export const metadata: Metadata = {
-  title: "Lunatek LLC - AI-Powered Infrastructure & Development",
+  title: "Lunatek LLC - Production-Ready Infrastructure",
   description:
-    "Expert infrastructure services with AI-assisted software development. We build, debug, and scale your MVPs and prototypes.",
+    "Deterministic Go-based foundations for scaling prototypes into production. Cloud-agnostic infrastructure deployed in days, not months.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased ${_rajdhani.className}`}>
+      <body className={`font-sans antialiased ${inter.className} ${_jetbrainsMono.variable}`}>
         {children}
         <Analytics />
       </body>

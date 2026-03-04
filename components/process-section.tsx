@@ -1,62 +1,77 @@
 const steps = [
   {
     number: "01",
-    title: "AI Prototype",
-    description: "Start with your AI-generated code or prototype. We take it from where the AI left off.",
+    title: "Intake & Assessment",
+    description: "We analyze your prototype, identifying architectural gaps, security vulnerabilities, and scaling limitations.",
+    output: "Technical audit document",
   },
   {
     number: "02",
-    title: "Human Review",
-    description: "Our engineers analyze the codebase, identifying gaps in security, scalability, and best practices.",
+    title: "Infrastructure Design",
+    description: "Architect deterministic Go foundations tailored to your specific use case and scaling requirements.",
+    output: "System architecture diagram",
   },
   {
     number: "03",
-    title: "Expert Refinement",
-    description: "Hands-on refactoring, optimization, and hardening by experienced developers who understand production needs.",
+    title: "Module Integration",
+    description: "Drop in pre-built, production-hardened modules. Your prototype's logic wraps around our battle-tested core.",
+    output: "Containerized services",
   },
   {
     number: "04",
-    title: "Production Ready",
-    description: "Deployed with proper infrastructure, monitoring, and the confidence that comes from human expertise.",
+    title: "Deployment & Handoff",
+    description: "Deployed to your cloud of choice with full observability, documentation, and runbooks.",
+    output: "Production environment",
   },
 ]
 
 export function ProcessSection() {
   return (
     <section id="process" className="relative py-20 md:py-32 overflow-hidden">
-      {/* Background gradients */}
+      {/* Grid background */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-[5%] h-[200px] w-[200px] rounded-full bg-gradient-to-br from-primary/10 to-transparent blur-2xl" />
-        <div className="absolute bottom-20 right-[5%] h-[150px] w-[150px] rounded-full bg-gradient-to-tl from-secondary/10 to-transparent blur-2xl" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(59,130,246,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(59,130,246,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
       </div>
 
-      <div className="container px-4 md:px-6 relative z-10">
-        <div className="mb-16 flex items-center gap-6">
-          <div className="h-16 w-16 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-            <span className="text-2xl font-bold text-primary-foreground">4</span>
+      <div className="container px-4 md:px-6">
+        <div className="mb-16 max-w-3xl">
+          <div className="mb-4 inline-flex items-center gap-3 border border-primary/30 bg-primary/5 px-4 py-2 font-mono text-xs">
+            <span className="uppercase tracking-widest text-primary">The Process</span>
           </div>
-          <h2 className="text-balance text-4xl font-bold uppercase leading-tight tracking-tight md:text-5xl lg:text-6xl">
-            How We
+          <h2 className="text-balance text-3xl font-bold uppercase leading-tight tracking-tight md:text-4xl lg:text-5xl">
+            Prototype to
             <br />
-            <span className="bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">Work</span>
+            <span className="text-primary">Production</span>
           </h2>
+          <p className="mt-6 text-pretty text-lg text-muted-foreground">
+            We take your messy MVP and drop it into a hardened infrastructure shell. Days, not months.
+          </p>
         </div>
 
-        <div className="mx-auto max-w-5xl">
-          <div className="grid gap-8 md:grid-cols-2">
+        {/* Vertical timeline */}
+        <div className="mx-auto max-w-3xl">
+          <div className="relative">
+            {/* Vertical line */}
+            <div className="absolute left-[27px] top-0 h-full w-px bg-border md:left-1/2 md:-translate-x-px" />
+
             {steps.map((step, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-xl border border-border/50 bg-gradient-to-br from-card to-card/50 p-8 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
-              >
-                <div className="absolute top-0 left-0 h-full w-1 bg-gradient-to-b from-primary to-secondary rounded-full transition-all group-hover:w-1.5" />
-                <div className="flex items-start gap-6">
-                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-xl border border-primary/50 bg-gradient-to-br from-primary/20 to-transparent font-mono text-2xl font-bold text-primary">
+              <div key={index} className="relative mb-12 last:mb-0">
+                <div className="flex items-start gap-6 md:gap-0">
+                  {/* Number badge */}
+                  <div className="relative z-10 flex h-14 w-14 flex-shrink-0 items-center justify-center border-2 border-primary bg-background font-mono text-xl font-bold text-primary md:absolute md:left-1/2 md:-translate-x-1/2">
                     {step.number}
                   </div>
-                  <div className="pt-2">
-                    <h3 className="mb-3 text-xl font-bold uppercase">{step.title}</h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+
+                  {/* Content - alternating sides on desktop */}
+                  <div className={`flex-1 md:w-[calc(50%-4rem)] ${index % 2 === 0 ? "md:pr-8 md:text-right md:ml-0 md:mr-auto" : "md:pl-8 md:ml-auto md:mr-0"}`}>
+                    <div className={`border border-border bg-card/50 p-6 ${index % 2 === 0 ? "" : "md:ml-[calc(50%+2rem)]"} ${index % 2 === 0 ? "md:mr-[calc(50%+2rem)]" : ""}`}>
+                      <h3 className="mb-2 font-mono text-lg font-bold uppercase tracking-wide">{step.title}</h3>
+                      <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{step.description}</p>
+                      <div className={`inline-flex items-center gap-2 font-mono text-xs text-primary ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+                        <div className="h-1 w-1 bg-primary" />
+                        Output: {step.output}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -64,25 +79,19 @@ export function ProcessSection() {
           </div>
         </div>
 
-        <div className="mx-auto mt-16 max-w-3xl">
-          <div className="relative overflow-hidden rounded-2xl border border-primary/30 bg-gradient-to-br from-card via-card to-primary/5 p-12">
-            <div className="absolute -top-12 -left-12 h-24 w-24 rounded-full bg-gradient-to-br from-primary/30 to-transparent blur-xl" />
-            <div className="absolute -bottom-12 -right-12 h-24 w-24 rounded-full bg-gradient-to-tl from-secondary/30 to-transparent blur-xl" />
-            <h3 className="relative z-10 mb-6 text-2xl font-bold uppercase">The Human Advantage</h3>
-            <div className="relative z-10 grid gap-6 md:grid-cols-3">
-              <div className="border-l-2 border-primary pl-4">
-                <p className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">AI Speed</p>
-                <p className="text-sm text-muted-foreground">Keep your prototype momentum</p>
-              </div>
-              <div className="border-l-2 border-primary pl-4">
-                <p className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Human Quality</p>
-                <p className="text-sm text-muted-foreground">Expert-level refinement</p>
-              </div>
-              <div className="border-l-2 border-primary pl-4">
-                <p className="text-lg font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Production Trust</p>
-                <p className="text-sm text-muted-foreground">Confidence in your code</p>
-              </div>
-            </div>
+        {/* Bottom stats */}
+        <div className="mt-20 grid gap-px bg-border md:grid-cols-3">
+          <div className="bg-background p-8 text-center">
+            <p className="font-mono text-4xl font-bold text-primary">7-14</p>
+            <p className="mt-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">Days to Deploy</p>
+          </div>
+          <div className="bg-background p-8 text-center">
+            <p className="font-mono text-4xl font-bold text-primary">100%</p>
+            <p className="mt-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">Go Core Logic</p>
+          </div>
+          <div className="bg-background p-8 text-center">
+            <p className="font-mono text-4xl font-bold text-primary">0</p>
+            <p className="mt-2 font-mono text-xs uppercase tracking-widest text-muted-foreground">Vendor Lock-in</p>
           </div>
         </div>
       </div>
